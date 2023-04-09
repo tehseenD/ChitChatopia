@@ -20,8 +20,27 @@ npm start
 This will start the frontend server and you can access the application by navigating to http://localhost:3001 in your browser.
 
 To run the backend, open a new terminal window, navigate to the project root directory, and run the following command:
+
 >npm install
 
+Change the following database connections in .env files as per your system:
+
+DB_HOST=127.0.0.1
+
+DB_USER=postgres
+
+DB_PASSWORD=Mnblkjpoi098!
+
+DB_DATABASE=chat_app
+ 
+ 
+Then, Run the following 2 commands on backend termainal
+
+>npx sequelize-cli db:migrate
+
+>npx sequelize-cli db:seed:all
+
+Start the server.
 >npx nodemon index.js
 
 This will start the backend server and you can access the API by sending HTTP requests to http://localhost:3000.
